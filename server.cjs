@@ -17,6 +17,7 @@ app.use(
       "http://localhost:5173",
       "https://it-service-desk1-1kya.vercel.app",
       "https://it-service-desk1-bzsf.vercel.app",
+      "https://it-service-desk1-llj6.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
