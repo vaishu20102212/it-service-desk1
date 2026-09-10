@@ -15,9 +15,10 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
+      "https://it-service-desk1.vercel.app",
+      "https://it-service-desk1-llj6.vercel.app",
       "https://it-service-desk1-1kya.vercel.app",
       "https://it-service-desk1-bzsf.vercel.app",
-      "https://it-service-desk1-llj6.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -113,12 +114,12 @@ app.post("/api/login", (req, res) => {
       });
     }
 
-    if (user.status.toLowerCase() !== "active") {
-      return res.status(403).json({
-        success: false,
-        message: "Your account is currently inactive",
-      });
-    }
+   if (String(user.status).toLowerCase() !== "active") {
+  return res.status(403).json({
+    success: false,
+    message: "Your account is currently inactive",
+  });
+}
 
     const { password: removedPassword, ...userData } = user;
 
