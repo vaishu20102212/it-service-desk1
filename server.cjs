@@ -113,7 +113,7 @@ app.post("/api/login", (req, res) => {
       });
     }
 
-    if (user.status !== "active") {
+    if (user.status.toLowerCase() !== "active") {
       return res.status(403).json({
         success: false,
         message: "Your account is currently inactive",
@@ -175,7 +175,7 @@ app.post("/login", (req, res) => {
       });
     }
 
-    if (user.status !== "active") {
+    if (user.status.toLowerCase() !== "active") {
       return res.status(403).json({
         success: false,
         message: "Your account is currently inactive",
