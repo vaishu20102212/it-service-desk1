@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "target": "es2023",
+    "lib": ["ES2023", "DOM"],
+    "module": "esnext",
+    "types": ["vite/client"],
+    "allowArbitraryExtensions": true,
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"],
+  "exclude": [
+    "src/components/Categories",
+    "src/components/Comments",
+    "src/components/common",
+    "src/components/Dashboard",
+    "src/components/Navbar",
+    "src/components/Sidebar",
+    "src/components/Tickets",
+    "src/components/Users",
+    "src/pages/Categories",
+    "src/pages/Dashboard",
+    "src/pages/Login",
+    "src/pages/Profile",
+    "src/pages/Reports",
+    "src/pages/Tickets",
+    "src/pages/Users",
+    "src/hooks",
+    "src/routes"
+  ]
+}
