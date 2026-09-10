@@ -13,10 +13,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5173",
-      "https://it-services-desk.vercel.app",
-    ],
+   origin: [
+  "http://localhost:5173",
+  "https://it-service-desk1-bzsf.vercel.app",
+],
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
